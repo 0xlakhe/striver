@@ -14,7 +14,7 @@
     {
       "label": "compile and run",
       "type": "shell",
-      "command": "g++ -std=c++17 -o '${fileBasenameNoExtension}' '${file}' && timeout 4s ./'${fileBasenameNoExtension}' < input.txt > output.txt",
+      "command": "g++ -std=c++17 -o '${fileBasenameNoExtension}' '${file}' && timeout 2s ./'${fileBasenameNoExtension}' < input.txt > output.txt",
       "group": {
         "kind": "build",
         "isDefault": true

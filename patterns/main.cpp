@@ -329,6 +329,111 @@ void print18(int n = 5)
 
 void print19(int n = 5)
 {
+    for (int i = 0; i < n; i += 1)
+    {
+        for (int j = 0; j < n - i; j += 1)
+        {
+            cout << "*";
+        }
+        for (int k = 0; k < 2 * i; k += 1)
+        {
+            cout << " ";
+        }
+        for (int j = n - i; j > 0; j -= 1)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for (int i = 1; i <= n; i += 1)
+    {
+        for (int j = 0; j < i; j += 1)
+        {
+            cout << "*";
+        }
+        for (int k = 0; k < 2 * n - 2 * i; k += 1)
+        {
+            cout << " ";
+        }
+        for (int j = 0; j < i; j += 1)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void print20(int n = 5)
+{
+    int spaces = 2 * n - 2;
+    for (int i = 1; i <= 2 * n - 1; i += 1)
+    {
+        int stars = i;
+
+        if (i > n)
+        {
+            stars = 2 * n - i;
+        }
+
+        for (int j = 1; j <= stars; j += 1)
+        {
+            cout << "*";
+        }
+
+        for (int k = 0; k < spaces; k += 1)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= stars; j += 1)
+        {
+            cout << "*";
+        }
+        if (i < n)
+        {
+            spaces -= 2;
+        }
+        else
+        {
+            spaces += 2;
+        }
+
+        cout << endl;
+    }
+}
+
+void print21(int n = 5)
+{
+    for (int i = 0; i < n; i += 1)
+    {
+        for (int j = 0; j < n; j += 1)
+        {
+            if (i == 0 || j == 0 || i == n - 1 || j == n - 1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+void print22(int n = 5)
+{
+    for (int i = 0; i < 2 * n - 1; i += 1)
+    {
+        for (int j = 0; j < 2 * n - 1; j += 1)
+        {
+            int top = i;
+            int left = j;
+            int bottom = (2 * n - 1) - 1 - i;
+            int right = (2 * n - 1) - 1 - j;
+            cout << (n - min(min(top, left), min(bottom, right)));
+        }
+        cout << endl;
+    }
 }
 
 int main()
@@ -352,5 +457,9 @@ int main()
     // print15(a);
     // print16(a);
     // print17(a);
-    print18(a);
+    // print18(a);
+    // print19(a);
+    // print20(a);
+    // print21(a);
+    print22(a);
 }
